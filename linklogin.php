@@ -17,8 +17,8 @@ class LinkLogin extends CI_Controller {
  
  
 	function initiate($id){
-		$this->data['appKey'] = "lomuwsnh4wih";
-		$this->data['appSecret'] = "QkOD0aoauzdwvUIh";
+		$this->data['appKey'] = "";
+		$this->data['appSecret'] = "";
 		$this->data['callbackUrl'] = "http://50.56.97.92/ci/linklogin/data/" . $id ;
 		$this->load->library('linkedin', $this->data);
 		$this->linkedin->setResponseFormat(LINKEDIN::_RESPONSE_JSON);
@@ -30,8 +30,8 @@ class LinkLogin extends CI_Controller {
 		redirect($link);
 	}
 	function data($id, $first_login=0){
-		$this->data['appKey'] = "lomuwsnh4wih";
-		$this->data['appSecret'] = "QkOD0aoauzdwvUIh";
+		$this->data['appKey'] = "";
+		$this->data['appSecret'] = "";
 		$this->data['callbackUrl'] = "http://50.56.97.92/ci/linklogin/data/" . $id ;
 		$this->load->library('linkedin', $this->data);
 		$this->linkedin->setResponseFormat(LINKEDIN::_RESPONSE_JSON);
